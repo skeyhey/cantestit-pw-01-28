@@ -81,7 +81,7 @@ const Login = () => {
 								<i className="pi pi-envelope"></i>
 							</span>
 							<span className="p-float-label">
-								<InputText onChange={e => setUsername(e.target.value)} type="text" id="inputgroup1" />
+								<InputText onChange={e => setUsername(e.target.value)} type="text" id="inputgroup1" data-testid="username-input" />
 								<label htmlFor="inputgroup1">Username</label>
 							</span>
 						</div>
@@ -91,13 +91,13 @@ const Login = () => {
 								<i className="pi pi-lock"></i>
 							</span>
 							<span className="p-float-label">
-								<InputText onChange={e => setPassword(e.target.value)} type="password" id="inputgroup2" />
+								<InputText onChange={e => setPassword(e.target.value)} type="password" id="inputgroup2" data-testid="password-input" />
 								<label htmlFor="inputgroup2">Password</label>
 							</span>
 						</div>
 					</div>
 					<div className="p-inputgroup mt-3">
-					<DynamicButton disabled={loading} onClick={login} className="login-button px-3" label="Login"></DynamicButton>
+					<DynamicButton disabled={loading} onClick={login} className="login-button px-3" label="Login" data-testid="login-button"></DynamicButton>
 					<span style={{ margin: '0 10px' }}></span>
 					<DynamicButton onClick={goRegister} className="p-button-secondary" label="Register"></DynamicButton>
 					</div>
